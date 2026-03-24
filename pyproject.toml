@@ -1,0 +1,25 @@
+[project]
+name = "thunderstorm-forcasting-with-mlflow-tracking"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dagshub==0.6.3",
+    "fastapi==0.124.2",
+    "gunicorn==23.0.0",
+    "imbalanced-learn==0.14.0",
+    "ipykernel==7.1.0",
+    "joblib==1.5.2",
+    "matplotlib==3.10.8",
+    "mlflow==3.7.0",
+    "numpy==2.2.6",
+    "pandas==2.3.3",
+    "pydantic==2.12.5",
+    "python-multipart==0.0.20",
+    "scikit-learn==1.7.2",
+    "seaborn==0.13.2",
+    "streamlit==1.52.1",
+    "uvicorn[standard]>=0.42.0",
+    "xgboost==3.1.2",
+]
