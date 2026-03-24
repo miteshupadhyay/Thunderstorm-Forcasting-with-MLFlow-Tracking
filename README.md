@@ -79,30 +79,3 @@ This project is designed for seamless deployment:
 ✅ Docker support
 ✅ Cloud-ready (AWS / Render)
 ✅ Lightweight model for fast startup
-📂 Project Structure
-.
-├── app.py                # Streamlit UI
-├── model/
-│   └── model.joblib     # Compressed trained model
-├── notebooks/           # EDA & experimentation
-├── mlruns/              # MLflow tracking data
-├── requirements.txt
-└── README.md
-
-
-⚡ Getting Started
-1️⃣ Clone the repository
-git clone <your-repo-url>
-cd thunderstorm-forecasting
-2️⃣ Create environment
-python -m venv thunderenv
-thunderenv\Scripts\activate
-3️⃣ Install dependencies
-pip install -r requirements.txt
-4️⃣ Run the application
-uvicorn api.main:app --host 0.0.0.0 --port 8000
-
-streamlit run streamlit_app\ui.py
-
-
-
