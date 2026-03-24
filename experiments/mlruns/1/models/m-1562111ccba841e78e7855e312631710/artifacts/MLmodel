@@ -1,0 +1,22 @@
+artifact_path: file:///d:/GenAI/Thunderstorm-Forcasting-with-MLFlow-Tracking/experiments/mlruns/1/models/m-1562111ccba841e78e7855e312631710/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.9
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.7.0
+model_id: m-1562111ccba841e78e7855e312631710
+model_size_bytes: 2432290
+model_uuid: m-1562111ccba841e78e7855e312631710
+prompts: null
+run_id: 2c54b132bc9d47d9b31efea04d63ae6b
+utc_time_created: '2026-03-24 22:07:27.280969'
