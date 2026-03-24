@@ -1,81 +1,71 @@
-🌩️ Thunderstorm (TH) Forecasting System
+# 🌦 Thunderstorm (TH) Forecasting System
 
-A production-ready Machine Learning application for predicting Thunderstorm (TH) occurrence using atmospheric indices, with experiment tracking powered by MLflow.
+A machine learning–based application for **Thunderstorm (TH) occurrence prediction** using atmospheric indices.  
+The project uses a **pre-trained & compressed Random Forest model** and provides an **interactive Streamlit web interface** for real-time predictions.
 
-🚀 Overview
+---
 
-This project delivers an end-to-end ML inference system designed for:
+## 🚀 Features
 
-🌦️ Weather prediction use cases
-⚡ Real-time thunderstorm risk estimation
-🧪 Reproducible experimentation using MLflow
+- ✅ Pre-trained **Random Forest Classifier**
+- ✅ Model size optimized using **Joblib compression**
+- ✅ Interactive **Streamlit UI**
+- ✅ No retraining required (inference-only)
+- ✅ Ready for **Docker** and **Cloud deployment (Render / AWS)**
+- ✅ Modular & production-ready project structure
 
-The system uses a pre-trained Random Forest model, optimized for performance and deployed via an interactive Streamlit interface.
+---
 
-✨ Key Features
-🧠 Pre-trained Random Forest Model (no retraining required)
-📊 Experiment Tracking with MLflow
-⚡ Fast inference with Joblib compression
-🎯 Handles class imbalance using SMOTE
-🖥️ Interactive UI built with Streamlit
-🐳 Docker-ready for deployment
-☁️ Deployable on AWS / Render / Cloud platforms
-🧩 Modular and scalable project architecture
-📊 Input Features
+## 📊 Input Features
 
-The model leverages key atmospheric indicators to predict thunderstorm occurrence:
+The model predicts thunderstorm occurrence using the following atmospheric parameters:
 
-🌡️ SWEAT Index
-🌪️ K Index
-☁️ Totals Totals Index
-🌍 Environmental Stability
-💧 Moisture Indices
-⚡ Convective Potential
-🌡️ Temperature Pressure
-🌫️ Moisture Temperature Profiles
-🧠 Model Architecture
-Component	Details
-Algorithm	Random Forest Classifier
-Training	Offline (separate pipeline)
-Imbalance Handling	SMOTE
-Model Format	Joblib
-Model Size	~5–10 MB (compressed)
-📈 Evaluation Metrics
+- SWEAT Index  
+- K Index  
+- Totals Totals Index  
+- Environmental Stability  
+- Moisture Indices  
+- Convective Potential  
+- Temperature Pressure  
+- Moisture Temperature Profiles  
 
-The model performance is evaluated using both standard ML metrics and meteorological skill scores:
+---
 
-🔹 Standard Metrics
-Accuracy
-Precision
-Recall
-F1 Score
-🔹 Domain-Specific Metrics
-🌩️ Probability of Detection (POD)
-🚨 False Alarm Rate (FAR)
-📊 Heidke Skill Score (HSS)
-🎯 Critical Success Index (CSI)
-🧪 Experiment Tracking (MLflow)
+## 🧠 Model Details
 
-All experiments are tracked using MLflow, enabling:
+- **Algorithm**: Random Forest Classifier  
+- **Training**: Offline (not included in this repo)  
+- **Class Imbalance Handling**: SMOTE  
+- **Evaluation Metrics**:
+  - Accuracy
+  - Precision
+  - Recall
+  - F1-score
+  - Probability of Detection (POD)
+  - False Alarm Rate (FAR)
+  - Heidke Skill Score (HSS)
+  - Critical Success Index (CSI)
 
-📌 Parameter logging
-📊 Metric tracking
-📦 Model versioning
-🔁 Reproducibility
+- **Model Format**: `joblib`  
+- **Compressed Size**: ~5–10 MB  
 
-👉 This ensures a robust and auditable ML lifecycle
+---
 
-🖥️ Application Interface
 
-The system provides a user-friendly interface built with Streamlit:
 
-Input atmospheric parameters
-Get real-time predictions
-View probability outputs
-🐳 Deployment Ready
 
-This project is designed for seamless deployment:
 
-✅ Docker support
-✅ Cloud-ready (AWS / Render)
-✅ Lightweight model for fast startup
+# Thunderstorm-Forcasting-with-MLFlow-Tracking
+uv init
+
+uv venv thenv
+
+thenv\Scripts\activate
+
+conda create -p thndenv python==3.13 -y
+
+# run the application
+
+uvicorn api.main:app --host 0.0.0.0 --port 8000
+
+streamlit run streamlit_app\ui.py
